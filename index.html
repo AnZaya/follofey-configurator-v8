@@ -41,9 +41,9 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sa
 .opt-right{display:flex;align-items:center;gap:6px;flex-shrink:0;white-space:nowrap}
 .price{font-weight:700;color:#f90;white-space:nowrap;font-size:13px;min-width:65px;text-align:right}
 .weight{color:#888;font-size:12px;white-space:nowrap;min-width:40px;text-align:right}
-.opt-i{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#f90;color:#fff;font-size:9px;font-weight:700;cursor:pointer;flex-shrink:0;position:relative;line-height:1}
+.opt-i{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#f90;color:#fff;font-size:9px;font-weight:700;cursor:pointer;flex-shrink:0;position:relative;line-height:1;z-index:1}
 .opt-i:hover .opt-popup,.opt-popup.show{display:block}
-.opt-popup{display:none;position:absolute;z-index:9999;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.25);padding:8px;min-width:220px;max-width:300px;text-align:center;pointer-events:auto;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%)}
+.opt-popup{display:none;position:absolute;z-index:99999;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.35);padding:8px;min-width:220px;max-width:300px;text-align:center;pointer-events:auto;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);overflow:visible}
 .opt-popup img{max-width:160px;max-height:120px;border-radius:4px;display:block;margin:0 auto}
 .opt-popup span{display:block;font-size:11px;color:#555;margin-top:4px}
 .bar{max-width:960px;margin:0 auto;background:#1a1a2e;border-radius:0 0 16px 16px;box-shadow:0 2px 20px rgba(0,0,0,.08);padding:14px 24px}
