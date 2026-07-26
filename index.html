@@ -25,6 +25,7 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sa
 .card-desc{font-size:13px;color:#777;margin-top:4px}
 .std-title{font-size:14px;font-weight:600;padding:10px 16px 4px;color:#333!important;text-transform:uppercase;letter-spacing:.5px}
 .std-box{background:#fafafa;margin:0 16px 12px;border-radius:10px;padding:12px}
+#stMax,#stdMax,#optMax{display:none}
 .std-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .std-item{font-size:13px;color:#555;display:flex;align-items:center;gap:6px}
 .ck{color:#4caf50;font-weight:700;font-size:14px}
@@ -311,8 +312,14 @@ function sel(e){
   M=e.getAttribute("data-m");P=parseInt(e.getAttribute("data-p"));W=BASE_W[M];
   document.querySelectorAll(".card").forEach(function(c){c.classList.remove("sel");});
   e.classList.add("sel");
-  document.querySelectorAll(".std-title,.std-box,.opt-box").forEach(function(x){x.style.display="none";});
   var k=M==="A3"?"3":"Max";
+  var k2=M==="A3"?"Max":"3";
+  var el=document.getElementById("st"+k2);
+  if(el)el.style.display="none";
+  el=document.getElementById("std"+k2);
+  if(el)el.style.display="none";
+  el=document.getElementById("opt"+k2);
+  if(el)el.style.display="none";
   document.getElementById("st"+k).style.display="block";
   document.getElementById("std"+k).style.display="block";
   document.getElementById("opt"+k).style.display="block";
@@ -381,9 +388,6 @@ function send(e){
 
 document.addEventListener("DOMContentLoaded",function(){
   document.querySelector('.card[data-m="A3"]').classList.add("sel");
-  document.getElementById("std3").style.display="block";
-  document.getElementById("st3").style.display="block";
-  document.getElementById("opt3").style.display="block";
   build();upd();
 });
 </script>
